@@ -36,7 +36,7 @@ if [[ -e $filename ]];
     fi
 fi
 
-rm $filename *.orig config.h
+rm $filename *.orig *.rej
 
 make clean
 

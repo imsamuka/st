@@ -5,12 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:pixelsize=12:antialias=true:autohint=true";
+static char *font = "monospace:pixelsize=13:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"FiraCode Nerd Font:pixelsize=12:antialias=true:autohint=true", // Powerline
-	"IPAGothic:pixelsize=12:antialias=true:autohint=true", // Japanese
-	"Symbola:pixelsize=12:antialias=true:autohint=true" // Unicode
+	"FiraCode Nerd Font:pixelsize=13:antialias=true:autohint=true", // Powerline
+	"IPAGothic:pixelsize=13:antialias=true:autohint=true", // Japanese
+	"Symbola:pixelsize=13:antialias=true:autohint=true" // Unicode
 };
 
 /* disable bold, italic and roman fonts globally */
@@ -85,8 +85,8 @@ static unsigned int cursorthickness = 2;
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
  * 0: disable (render all U25XX glyphs normally from the font).
  */
-const int boxdraw = 0;
-const int boxdraw_bold = 0;
+const int boxdraw = 1;
+const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
 const int boxdraw_braille = 0;
@@ -115,7 +115,7 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -257,9 +257,11 @@ static MouseShortcut mshortcuts[] = {
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
+	{ TERMMOD,              XK_Print,       toggleprinter,  {.i =  0} },
+//{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
+//{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
+	{ ControlMask,          XK_KP_Add,      zoom,           {.f = +1} },
+	{ ControlMask,          XK_KP_Subtract, zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },

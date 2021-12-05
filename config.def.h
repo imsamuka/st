@@ -13,6 +13,11 @@ static char *font2[] = {
 	"Symbola:pixelsize=12:antialias=true:autohint=true" // Unicode
 };
 
+/* disable bold, italic and roman fonts globally */
+int disablebold = 1;
+int disableitalic = 1;
+int disableroman = 1;
+
 static int borderpx = 2;
 
 /*

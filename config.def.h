@@ -5,7 +5,14 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "monospace:pixelsize=12:antialias=true:autohint=true";
+/* Spare fonts */
+static char *font2[] = {
+	"FiraCode Nerd Font:pixelsize=12:antialias=true:autohint=true", // Powerline
+	"IPAGothic:pixelsize=12:antialias=true:autohint=true", // Japanese
+	"Symbola:pixelsize=12:antialias=true:autohint=true" // Unicode
+};
+
 static int borderpx = 2;
 
 /*

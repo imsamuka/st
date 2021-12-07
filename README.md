@@ -3,6 +3,24 @@ st - simple terminal
 st is a simple terminal emulator for X which sucks less.
 
 
+Features
+------------
+* Bold Text
+* Scrollback
+* Arbitrary terminal size ([anysize](https://st.suckless.org/patches/anysize/))
+* Fallback Fonts
+* Blinking Cursor
+* Better ASCI drawing ([boxdraw](https://st.suckless.org/patches/boxdraw/))
+* .desktop file
+* Text isn't cut off on resizing
+* XResources
+* Vertically centered text
+* External pipe
+    * st-copyout: copy a command output (Ctrl + Shift + o)
+* New terminal on CWD (Ctrl + Shift + Enter)
+* Define working directory with `-d`
+* Hardcoded Icon ([netwmicon](https://st.suckless.org/patches/netwmicon/))
+
 Requirements
 ------------
 In order to build st you need the Xlib header files.

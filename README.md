@@ -16,7 +16,7 @@ Features
 * XResources
 * Vertically centered text
 * External pipe
-    * st-copyout: copy a command output (Ctrl + Shift + o)
+    * st-copyout: copy a command output (Alt + o)
 * New terminal on CWD (Ctrl + Shift + Enter)
 * Define working directory with `-d`
 * Hardcoded Icon ([netwmicon](https://st.suckless.org/patches/netwmicon/))
